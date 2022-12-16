@@ -1,0 +1,30 @@
+@startuml
+
+
+class Chromosome {
+{static}+MAX_SHAPES: int
+{static}+MAxpoints: int
++DNA:Shape[]
+{static}+IMWIDTH: int
+{static}+IMHEIGHT: int
+{static}+target: BufferedImage
+{static}+NORM_COEFF:long
+-random : Random
+{static}-inputFile:String
+
++Chromosome()
++Chromosome(Chromosome copy)
+{static}+passGeneMutation(Chromosome from, Chromosome to, int index):void
++mutate():int
+{static}+drawDNA(Chromosome ch): BufferedImage
+{static}computeFitness(BufferedImage test): long
+{static}+setTarget(String file):void
+{static}+saveToFile(Chromosome c, int gen): void
+{static}+main(String[] args):void
+
+
+}
+
+
+
+@enduml
