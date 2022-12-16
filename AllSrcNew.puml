@@ -67,6 +67,9 @@ class Shape {
 + print(): void
 + toString(): String
 }
-
+GUI -- Chromosome
+GUI -- StretchIcon
+Chromosome -- Shape
+JEvoLisa -- Chromosome
 
 @enduml
