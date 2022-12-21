@@ -74,6 +74,15 @@ class Poly{
 +main():void
 }
 
+class Main{
+-mainMap : JFrame
+-poly : Polygon
+{static}-pic : BufferedImage
++Main(): void
+-initComponents(): void
+{static}+main(): void
+}
+
 GUI -- Chromosome
 GUI -- StretchIcon
 Chromosome -- Shape
