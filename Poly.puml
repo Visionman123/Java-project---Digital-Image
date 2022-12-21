@@ -1,0 +1,6 @@
+@startuml
+class Poly{
+{static} AnzPoly : int
++main():void
+}
+@enduml
