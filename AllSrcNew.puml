@@ -87,6 +87,7 @@ GUI -- Chromosome
 GUI -- StretchIcon
 Chromosome -- Shape
 JEvoLisa -- Chromosome
+Main -- Poly
 
 @enduml
 
