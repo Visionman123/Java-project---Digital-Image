@@ -72,4 +72,11 @@ GUI -- StretchIcon
 Chromosome -- Shape
 JEvoLisa -- Chromosome
 
+@startuml
+class Poly{
+{static} AnzPoly : int
++main():void
+}
+@enduml
+
 @enduml
