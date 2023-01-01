@@ -1,0 +1,27 @@
+@startuml
+
+class StretchIcon extends ImageIcon {
+#proportionate: boolean
+
++StretchIcon(byte[] imageData)
++StretchIcon(byte[] imageData, boolean proportionate)
++StretchIcon(byte[] imageData, String description)
++StretchIcon(byte[] imageData, String description, boolean proportionate)
++StretchIcon(Image image)
++StretchIcon(Image image, boolean proportionate)
++StretchIcon(Image image, String description)
++StretchIcon(Image image, String description, boolean proportionate)
++StretchIcon(String filename)
++StretchIcon(String filename, boolean proportionate)
++StretchIcon(String filename, String description)
++StretchIcon(String filename, String description, boolean proportionate)
++StretchIcon(URL location)
++StretchIcon(URL location, boolean proportionate)
++StretchIcon(URL location, String description)
++StretchIcon(URL location, String description, boolean proportionate)
++paintIcon(Component c, Graphics g, int x, int y): void
++getIconWidth(): int
++getIconHeight(): int
+}
+
+@enduml

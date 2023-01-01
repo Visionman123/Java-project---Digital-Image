@@ -1,0 +1,11 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+
+class JEvoLisa {
++main(String args[]): void
+-paint(): void
+}
+
+
+@enduml

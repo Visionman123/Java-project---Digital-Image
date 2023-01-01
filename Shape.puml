@@ -1,0 +1,13 @@
+@startuml
+
+class Shape {
++ color: Color
++ polygon : Polygon
++ Shape(Color color, Polygon polygon)
++ Shape(Shape shape)
++ print(): void
++ toString(): String
+}
+
+@enduml
+

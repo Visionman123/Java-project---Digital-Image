@@ -1,0 +1,41 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+
+class  GUI extends JPanel {
+-frame:JFrame
+{static}-textFieldOpen: JTextField 
+{static}-TextFieldSave: JTextField 
+{static}- t1:Thread 
+{static}-lblGenVar: JLabel 
+{static}-lblimpVar : JLabel 
+{static}- lblFitnessVal :JLabel 
+{static}- lblimage2:JLabel 
+
+{static}- BetterFilePath:String 
+
+{static}- GenVal:long 
+{static}- ImpVal:long 
+{static}- FitnessVal:double 
+{static}- OldFitness :double 
+{static}- NewFitness :double 
+
+{static}+ void main(String[] args) 
++GUI()
+- start() :void
+- stop():void
+-initialize() : void
++paint(Graphics g):void
+{static}+ FileSaveDialog(): String
+{static}+ FileOpenDialog():String
+{static}+ Compare(String PathOri): void
+{static}- setText(final JLabel label, final String text):void
+{static}+ getFitnessVal():double
+{static}+ setFitnessVal(double fitnessVal):void
+{static}+ BetterFilePath(String Path):void
+- paint():void
+}
+
+
+
+@enduml
