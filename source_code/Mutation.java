@@ -1,4 +1,4 @@
-package group.project;
+package source_code;
 
 import java.awt.*;
 import java.util.Random;
