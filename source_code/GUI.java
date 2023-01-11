@@ -154,6 +154,20 @@ public class GUI extends JPanel {
                     textFieldOpen.setEditable(false);
                     try {
                         OriImage = ImageIO.read(new File(textFieldOpen.getText()));
+
+                        int targetWidth = 400;
+                        int targetHeight = 400;
+
+                        if (OriImage.getWidth() > OriImage.getHeight()) {
+                            targetHeight = OriImage.getHeight()/(OriImage.getWidth()/400);
+                        } else {
+                            targetWidth = OriImage.getWidth()/(OriImage.getHeight()/400);
+                        }
+
+
+
+                        OriImage = resizeImage(OriImage, targetWidth, targetHeight);
+
                     } catch (IOException ioException) {
                         ioException.printStackTrace();
                     }
@@ -163,7 +177,6 @@ public class GUI extends JPanel {
                     bestImage.createImageFrom(OriImage);
                     bestImage.renderPolygons();
                     bestImage.repaint();
-
                 }
             }
 
@@ -287,6 +300,14 @@ public class GUI extends JPanel {
         }
     }
 
+    BufferedImage resizeImage(BufferedImage originalImage, int targetWidth, int targetHeight) throws IOException {
+        BufferedImage resizedImage = new BufferedImage(targetWidth, targetHeight, BufferedImage.TYPE_INT_RGB);
+        Graphics2D graphics2D = resizedImage.createGraphics();
+        graphics2D.drawImage(originalImage, 0, 0, targetWidth, targetHeight, null);
+        graphics2D.dispose();
+        return resizedImage;
+    }
+
     public static String FileOpenDialog() {
 
         JFileChooser input = new JFileChooser();
@@ -302,7 +323,6 @@ public class GUI extends JPanel {
             System.out.println("Cancel was selected");
             return null;
         } else {
-
             return null;
         }
     }

@@ -25,8 +25,8 @@ public class ImagePanel extends JPanel {
         return image;
     }
 
-    public void setImage(BufferedImage image) {
-        this.image = image;
+    public BufferedImage setImage(BufferedImage image) {
+        return this.image = image;
     }
 
     public Polygongen getPolygongen() {
