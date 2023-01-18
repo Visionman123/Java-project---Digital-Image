@@ -103,11 +103,8 @@ public class GUI extends JPanel {
 
         JLayeredPane panel_2 = new JLayeredPane();
         splitPane.setRightComponent(panel_2);
-
         originalImage = new ImagePanel(null);
-
         bestImage = new ImagePanel(null);
-
         evolvingImage = new ImagePanel(null);
 
         JButton btnStart = new JButton("Start");
@@ -154,20 +151,14 @@ public class GUI extends JPanel {
                     textFieldOpen.setEditable(false);
                     try {
                         OriImage = ImageIO.read(new File(textFieldOpen.getText()));
-
                         int targetWidth = 400;
                         int targetHeight = 400;
-
                         if (OriImage.getWidth() > OriImage.getHeight()) {
                             targetHeight = OriImage.getHeight()/(OriImage.getWidth()/400);
                         } else {
                             targetWidth = OriImage.getWidth()/(OriImage.getHeight()/400);
                         }
-
-
-
                         OriImage = resizeImage(OriImage, targetWidth, targetHeight);
-
                     } catch (IOException ioException) {
                         ioException.printStackTrace();
                     }
@@ -179,7 +170,6 @@ public class GUI extends JPanel {
                     bestImage.repaint();
                 }
             }
-
         });
 
         JLabel lblGenerations = new JLabel("Generations");
@@ -277,7 +267,7 @@ public class GUI extends JPanel {
 
         frame.getContentPane().setLayout(groupLayout);
     }
-
+//
     public void paint(Graphics g) {
         super.paint(g);
         Graphics2D g2d = (Graphics2D) g;
@@ -331,7 +321,6 @@ public class GUI extends JPanel {
         Fitness f = new Fitness(OriImage);
         Mutation mutation = new Mutation(new Dimension(OriImage.getWidth(), OriImage.getHeight()), bestImage.getPolygongen());
         do {
-
             mutation.mutate();
             bestImage.renderPolygons();
             bestImage.repaint();
@@ -341,10 +330,8 @@ public class GUI extends JPanel {
             } else {
                 mutation.undoLastMutation();
             }
-
             GenVal++;
             setText(lblGenVar, Long.toString(GenVal));
-
         } while (true);
     }
 
