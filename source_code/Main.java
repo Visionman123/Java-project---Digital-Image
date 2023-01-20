@@ -7,7 +7,6 @@ import javax.imageio.ImageIO;
 
 public class Main 
 {
-
 	  public static void main(String[] args) throws IOException 
 	  {
 		  BufferedImage OriImage;
@@ -19,9 +18,5 @@ public class Main
   
 	      // Initializes fitness and Mutation objects and gives the original image to fitness
 	      Fitness f = new Fitness(OriImage); 
-
-	      // start of the do-while Loop
-	      // checks the image its given on its fitness and afterwards mutates the next version
-	      // Path = "C:\\Users\\namng\\Desktop\\Java\\Pre-project\\mona.png";
 	  }	  
 }

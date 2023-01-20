@@ -12,7 +12,6 @@ public class ImagePanel extends JPanel {
         this.image = image;
     }
 
-
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);

@@ -9,7 +9,6 @@ public class Mutation {
     private int height;                            //height of the original image
     private int width;                            //width of the original image
     private Polygongen imagePolygongen;
-
     private int mutationProperty;                    //rng choice of the omponent
     private int chosenPolygonIndex;
     private int valueBeforeMutation;

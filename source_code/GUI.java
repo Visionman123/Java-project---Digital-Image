@@ -139,7 +139,6 @@ public class GUI extends JPanel {
 
         });
 
-
         JButton btnOpen = new JButton("Open");
         btnOpen.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -191,7 +190,6 @@ public class GUI extends JPanel {
         lblFitnessVal = new JLabel("0");
         lblFitnessVal.setFont(new Font("Tahoma", Font.BOLD, 12));
 
-
         GroupLayout gl_panel_2 = new GroupLayout(panel_2);
         gl_panel_2.setHorizontalGroup(
                 gl_panel_2.createParallelGroup(Alignment.LEADING)
@@ -223,6 +221,7 @@ public class GUI extends JPanel {
                                                 .addComponent(lblFitnessVal)))
                                 .addGap(46))
         );
+
         gl_panel_2.setVerticalGroup(
                 gl_panel_2.createParallelGroup(Alignment.LEADING)
                         .addGroup(gl_panel_2.createSequentialGroup()
@@ -243,12 +242,12 @@ public class GUI extends JPanel {
                                         .addComponent(lblimpVar))
                                 .addGap(30))
         );
+
         panel_2.setLayout(gl_panel_2);
 
         JSplitPane splitPane_1 = new JSplitPane();
         splitPane_1.setResizeWeight(.5d);
         splitPane.setLeftComponent(splitPane_1);
-
         splitPane_1.setLeftComponent(panel_1);
         panel_1.setLayout(new FlowLayout(FlowLayout.CENTER, 200, 200));
 
@@ -271,7 +270,6 @@ public class GUI extends JPanel {
     public void paint(Graphics g) {
         super.paint(g);
         Graphics2D g2d = (Graphics2D) g;
-
     }
 
     public static String FileSaveDialog() {
@@ -285,7 +283,6 @@ public class GUI extends JPanel {
             System.out.println("Cancel was selected");
             return null;
         } else {
-
             return null;
         }
     }
@@ -299,7 +296,6 @@ public class GUI extends JPanel {
     }
 
     public static String FileOpenDialog() {
-
         JFileChooser input = new JFileChooser();
         FileFilter filter = new FileNameExtensionFilter("Bilder", "gif", "png", "jpg");
         input.setCurrentDirectory(new File("C:\\Users\\Jan\\git\\ProjectMonalisa\\EvoLisaTest\\src"));
