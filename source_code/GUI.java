@@ -42,7 +42,7 @@ public class GUI extends JPanel {
 
     private static BufferedImage OriImage;
 
-    //Start runing the Java program
+   
 
     public GUI() {
         initialize();
