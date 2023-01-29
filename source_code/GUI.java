@@ -27,7 +27,7 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 
 public class GUI extends JPanel {
 
-    private JFrame frame;
+    JFrame frame;
     private static JTextField textFieldOpen;
     private static Thread t1;
     private static JLabel lblGenVar;
@@ -42,16 +42,7 @@ public class GUI extends JPanel {
 
     private static BufferedImage OriImage;
 
-    public static void main(String[] args) {
-        EventQueue.invokeLater(() -> {
-            try {
-                GUI window = new GUI();
-                window.frame.setVisible(true);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        });
-    }
+    //Start runing the Java program
 
     public GUI() {
         initialize();

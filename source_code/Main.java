@@ -3,20 +3,17 @@ package source_code;
 import java.awt.image.BufferedImage;
 import java.io.*;
 import javax.imageio.ImageIO;
+import java.awt.EventQueue;
 
-
-public class Main 
-{
-	  public static void main(String[] args) throws IOException 
-	  {
-		  BufferedImage OriImage;
-		  String PathOri = "C:\\Users\\namng\\Desktop\\Java\\Pre-project\\mona.png";
-		  String Path;
-		  
-		  //opens the original Image
-		  OriImage = ImageIO.read(new File (PathOri));	
-  
-	      // Initializes fitness and Mutation objects and gives the original image to fitness
-	      Fitness f = new Fitness(OriImage); 
-	  }	  
+public class Main {
+    public static void main(String[] args) {
+        EventQueue.invokeLater(() -> {
+            try {
+                GUI window = new GUI();
+                window.frame.setVisible(true);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+    }
 }
